@@ -1,0 +1,26 @@
+faire un module simple qui fait des print("helloworld")
++ regarder un peu les options
+
+(TESTER LES TRUCS SUR UN FICHIER CONNU pour conna�tre les resultats)
+
+1 > Faire une r�gle et la tester
+https://yara.readthedocs.io/en/v3.10.0/gettingstarted.html#compiling-yara
+2 > Comment invoquer des fonctions depuis une r�gle yara (ssdeep.helloworld())
+3 > Comment passer des arguments � cette fonction
+4 > Conna�tre les contextes envoy�s depuis la r�gle yara (genre pointeur+taille + r�gle au format texte)
+5 > Impl�mentation de ssdeep pour alculer un hash sur le bloc de donn�es
+6 > Traduction depuis une r�pr�sentation en cha�ne de caract�re ssdeep en une structure/objet 
+    qui puisse �tre compar�e (fuzzy_compare(), fuzzy_hash_buf())
+7 > Comparer le r�sultat (c'est en pourcentage, on veut > 0.7).
+    (> https://countuponsecurity.com/2016/03/09/unleashing-yara-part-3/)
+
+https://yara.readthedocs.io/en/v3.10.0/writingrules.html#
+https://yara.readthedocs.io/en/v3.4.0/modules/pe.html#pe-module
+https://yara.readthedocs.io/en/v3.7.0/modules/pe.html#c.sections
+https://yara.readthedocs.io/en/v3.7.0/writingmodules.html#accessing-the-scanned-data
+https://github.com/VirusTotal/yara/blob/master/libyara/modules/pe.c
+https://github.com/ssdeep-project/ssdeep
+https://yara.readthedocs.io/en/v3.5.0/modules/hash.html
+
+
++> Créer un agent qui va bruteforcer du xor sur un fichier pour voir si c'est une extension de fichier connue
