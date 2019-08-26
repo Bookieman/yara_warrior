@@ -28,4 +28,4 @@ MODULE(macho)
 MODULE(dex)
 #endif
 
-MODULE(boo)
+MODULE(ssdeep)

@@ -1,7 +1,7 @@
 #include <yara/modules.h>
 #include "deps/ssdeep/fuzzy.h"
 
-#define MODULE_NAME boo
+#define MODULE_NAME ssdeep
 
 define_function(fuzzy_hash)
 {
@@ -44,7 +44,6 @@ define_function(fuzzy_hash)
     return_string(result);
 }
 
-
 define_function(fuzzy_cmp)
 {
   YR_SCAN_CONTEXT *context = scan_context();
@@ -62,8 +61,8 @@ define_function(fuzzy_cmp)
 
 begin_declarations;
 
-    declare_function("fuzzy", "ii", "s", fuzzy_hash);
-    declare_function("fuzzy_cmp", "ss","i", fuzzy_cmp);
+    declare_function("hash", "ii", "s", fuzzy_hash);
+    declare_function("compare", "ss","i", fuzzy_cmp);
 
 end_declarations;
 

@@ -38,7 +38,7 @@ endif
 # MODULES += modules/yourmodule.c
 #
 
-MODULES += modules/boo.c
+MODULES += modules/ssdeep.c
 MODULES += modules/deps/ssdeep/fuzzy.c
 
 
