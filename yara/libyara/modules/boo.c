@@ -1,5 +1,5 @@
 #include <yara/modules.h>
-#include "deps_cortex/ssdeep/fuzzy.h"
+#include "deps/ssdeep/fuzzy.h"
 
 #define MODULE_NAME boo
 
@@ -41,7 +41,6 @@ define_function(fuzzy_hash)
         }
     }
     fuzzy_digest(ctx, result, 0);
-    // printf("%s\n", result);
     return_string(result);
 }
 
@@ -57,9 +56,6 @@ define_function(fuzzy_cmp)
   int result;
 
   result = fuzzy_compare(first_fuzz, second_fuzz);
-
-  // printf("fuzzy compare : %i\n", result);
-
   return_integer(result);
 }
 

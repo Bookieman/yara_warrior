@@ -37,8 +37,10 @@ endif
 #
 # MODULES += modules/yourmodule.c
 #
+
 MODULES += modules/boo.c
-MODULES += modules/deps_cortex/ssdeep/fuzzy.c
+MODULES += modules/deps/ssdeep/fuzzy.c
+
 
 AM_YFLAGS=-d
 
